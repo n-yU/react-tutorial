@@ -5,6 +5,8 @@ services:
     build: .
     volumes:
       - ./:/usr/src/app
-    command: sh -c 'cd react-app && yarn start'
+    command:
+      - sh -c 'cd react-app && yarn start'
+      - sh -c 'cd tic-tac-toe %% yarn start'
     ports:
       - '3000:3000'
